@@ -23,9 +23,9 @@ UpdateLevel          = "patch"
 VpcNameTag           = "test"
 stack_reg_ex         = "^64bit Amazon Linux 2018.03 v3.0.3 running Tomcat (.*) Java (.*)"
 common_tags = {
-    Application = "Aric"
+    Application = "Apps"
     Environment = "Dev"
     CostCode    = "0"
     SquadName   = "jim"
-    AccountType = "Aric"
+    AccountType = "Development"
   }

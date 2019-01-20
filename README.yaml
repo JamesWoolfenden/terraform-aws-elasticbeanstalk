@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: terraform-aws-ebssnap
+name: terraform-aws-elasticbeanstalk
 
 # Tags of this project
 tags:
@@ -32,16 +32,16 @@ copyrights:
     year: "2019"
 
 # Canonical GitHub repo
-github_repo: JamesWoolfenden/terraform-aws-ebssnap
+github_repo: JamesWoolfenden/terraform-aws-elasticbeanstalk
 
 # Badges to display
 badges:
   - name: "Build Status"
-    image: "https://travis-ci.com/JamesWoolfenden/terraform-aws-ebssnap.svg?branch=master"
-    url: "https://travis-ci.com/JamesWoolfenden/terraform-aws-ebssnap"
+    image: "https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg?branch=master"
+    url: "https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk"
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ebssnap.svg"
-    url: "https://github.com/JamesWoolfenden/terraform-aws-ebssnap/releases/latest"
+    image: "https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg"
+    url: "https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest"
 
 related:
   - name: "terraform-aws-s3"
@@ -57,17 +57,13 @@ usage: |-
   Include this repository as a module in your existing terraform code:
 
   ``` HCL
-  module "ebsnapshot" {
-    source          = "github.com/jameswoolfenden/terraform-aws-ebssnap"
+  module "elasticbeanstalk" {
+    source          = "github.com/jameswoolfenden/terraform-aws-elasticbeanstalk"
     common_tags     = "${var.common_tags}"
-    snapshot_name   = "${local.snapshot_name}"
-    cron_expression = "${var.cron_expression}"
-    regions         = "${var.regions}"
   }
   ```
 
 include:
-  - "docs/usage.md"
   - "docs/terraform.md"
   - "docs/targets.md"
 

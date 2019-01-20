@@ -1,8 +1,8 @@
 resource "aws_elastic_beanstalk_environment" "beanstalk" {
-  name        = "${var.application_name}-EB"
-  application = "${aws_elastic_beanstalk_application.application.name}"
+  name                = "${var.application_name}-EB"
+  application         = "${aws_elastic_beanstalk_application.application.name}"
   solution_stack_name = "${data.aws_elastic_beanstalk_solution_stack.stack.name}"
-  version_label = "${aws_elastic_beanstalk_application_version.latest.name}"
+  version_label       = "${aws_elastic_beanstalk_application_version.latest.name}"
 
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
@@ -164,7 +164,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
     value     = "${var.healthcheck}"
   }
 
-    tags = "${merge(var.common_tags
+  tags = "${merge(var.common_tags
     , map("Name", "${var.application_name}-EB-CT")
     )}"
 }

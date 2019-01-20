@@ -1,11 +1,22 @@
-variable "application_key" {  type        = "string"
-  description = ""}
-variable "application_name" {  type        = "string"
-  description = ""}
-variable "asg-instanceport" {  type        = "string"
-  description = ""}
-variable "asg-listenerport" {  type        = "string"
-  description = ""}
+variable "application_key" {
+  type        = "string"
+  description = ""
+}
+
+variable "application_name" {
+  type        = "string"
+  description = ""
+}
+
+variable "asg-instanceport" {
+  type        = "string"
+  description = ""
+}
+
+variable "asg-listenerport" {
+  type        = "string"
+  description = ""
+}
 
 variable "asg-maxsize" {
   type        = "string"

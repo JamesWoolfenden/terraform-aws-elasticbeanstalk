@@ -19,6 +19,7 @@ variable "stack_reg_ex" {}
 variable "StreamLogs" {}
 variable "UpdateLevel" {}
 variable "VpcNameTag" {}
+
 variable "common_tags" {
   type = "map"
 }
