@@ -1,0 +1,77 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: terraform-aws-ebssnap
+
+# Tags of this project
+tags:
+  - aws
+  - terraform
+  - terraform-modules
+  - ebs
+  - snapshot
+
+# Categories of this project
+categories:
+  - terraform-modules/ec2
+
+# Logo for this project
+#logo: docs/slalom-logo.png
+
+# License of this project
+license: "APACHE2"
+
+# Copyrights
+copyrights:
+  - name: "Slalom, LLC"
+    url: "https://slalom.com"
+    year: "2019"
+
+# Canonical GitHub repo
+github_repo: JamesWoolfenden/terraform-aws-ebssnap
+
+# Badges to display
+badges:
+  - name: "Build Status"
+    image: "https://travis-ci.com/JamesWoolfenden/terraform-aws-ebssnap.svg?branch=master"
+    url: "https://travis-ci.com/JamesWoolfenden/terraform-aws-ebssnap"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ebssnap.svg"
+    url: "https://github.com/JamesWoolfenden/terraform-aws-ebssnap/releases/latest"
+
+related:
+  - name: "terraform-aws-s3"
+    description: "S3 buckets"
+    url: "https://github.com/jameswoolfenden/terraform-aws-s3"
+
+# Short description of this project
+description: |-
+  A Terraform module to automate the taking of backup snapshots.
+
+# How to use this project
+usage: |-
+  Include this repository as a module in your existing terraform code:
+
+  ``` HCL
+  module "ebsnapshot" {
+    source          = "github.com/jameswoolfenden/terraform-aws-ebssnap"
+    common_tags     = "${var.common_tags}"
+    snapshot_name   = "${local.snapshot_name}"
+    cron_expression = "${var.cron_expression}"
+    regions         = "${var.regions}"
+  }
+  ```
+
+include:
+  - "docs/usage.md"
+  - "docs/terraform.md"
+  - "docs/targets.md"
+
+# Contributors to this project
+contributors:
+  - name: "James Woolfenden"
+    github: "jameswoolfenden"
