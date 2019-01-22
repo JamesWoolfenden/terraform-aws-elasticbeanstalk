@@ -50,7 +50,7 @@ related:
 
 # Short description of this project
 description: |-
-  A Terraform module to automate the taking of backup snapshots.
+  A Terraform module orhanisae and deploy AWS Elasticbeanstalk.
 
 # How to use this project
 usage: |-

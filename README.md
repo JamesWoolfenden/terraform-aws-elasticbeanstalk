@@ -4,7 +4,7 @@
 
 # terraform-aws-elasticbeanstalk [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest)
 
-A Terraform module to automate the taking of backup snapshots.
+  A Terraform module orhanisae and deploy AWS Elasticbeanstalk.
 
 ---
 
@@ -65,7 +65,7 @@ Available targets:
   help/all:
                           Display help for all targets
   help/short:
-                        This help short screen
+                          This help short screen
   help:
                               Help screen
   lint                                Lint terraform code
