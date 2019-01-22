@@ -67,8 +67,9 @@ Available targets:
   help/short:
                           This help short screen
   help:
-                              Help screen
-  lint                                Lint terraform code
+                          Help screen
+  lint
+                          Lint terraform code
 
 ```
 
@@ -84,7 +85,8 @@ Check out these related projects.
 
 File a GitHub [issue](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/issues).
 
-## Contribut
+## Contribute
+
 ### Bug Reports & Feature Requests
 
 Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/issues) to report any bugs or file feature requests.
