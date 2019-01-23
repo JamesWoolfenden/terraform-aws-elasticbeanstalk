@@ -57,21 +57,6 @@ module "elasticbeanstalk" {
 |-------|-------------|
 | cname | -           |
 
-## Makefile Targets
-
-```bash
-Available targets:
-
-  help/all:
-                          Display help for all targets
-  help/short:
-                          This help short screen
-  help:
-                          Help screen
-  lint
-                          Lint terraform code
-
-```
 
 ## Related Projects
 
@@ -120,8 +105,7 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
@@ -129,7 +113,6 @@ See [LICENSE](LICENSE) for full details.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[slack]: https://cpco.io/slack
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
 
