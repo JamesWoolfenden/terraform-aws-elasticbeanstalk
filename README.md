@@ -4,7 +4,7 @@
 
 # terraform-aws-elasticbeanstalk [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest)
 
-  A Terraform module orhanisae and deploy AWS Elasticbeanstalk.
+  A Terraform module organise and deploy AWS Elasticbeanstalk.
 
 ---
 
@@ -22,8 +22,6 @@ module "elasticbeanstalk" {
   common_tags     = "${var.common_tags}"
 }
 ```
-
-
 ## Inputs
 
 | Name                  | Description                                                     |  Type  | Default  | Required |
