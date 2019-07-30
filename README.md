@@ -22,36 +22,36 @@ module "elasticbeanstalk" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
-| Name                  | Description                                                     |  Type  | Default  | Required |
-|-----------------------|-----------------------------------------------------------------|:------:|:--------:|:--------:|
-| CrossZone             | -                                                               | string |    -     |   yes    |
-| ImageId               | -                                                               | string |    -     |   yes    |
-| LogPublicationControl | -                                                               | string |    -     |   yes    |
-| ManagedActions        | -                                                               | string |    -     |   yes    |
-| PreferredStartTime    | -                                                               | string |    -     |   yes    |
-| RetentionInDays       | -                                                               | string |    -     |   yes    |
-| StreamLogs            | -                                                               | string |    -     |   yes    |
-| UpdateLevel           | -                                                               | string |    -     |   yes    |
-| VpcNameTag            | -                                                               | string |    -     |   yes    |
-| application_key       | -                                                               | string |    -     |   yes    |
-| application_name      | -                                                               | string |    -     |   yes    |
-| asg-instanceport      | -                                                               | string |    -     |   yes    |
-| asg-listenerport      | -                                                               | string |    -     |   yes    |
-| asg-maxsize           | -                                                               | string |    -     |   yes    |
-| asg-minsize           | -                                                               | string |    -     |   yes    |
-| common_tags           | -                                                               |  map   |    -     |   yes    |
-| depends_on            | This is a way to make a module depends on, which isnt built in. |  list  | `<list>` |    no    |
-| healthcheck           | -                                                               | string |    -     |   yes    |
-| instance_size         | -                                                               | string |    -     |   yes    |
-| name                  | -                                                               | string |    -     |   yes    |
-| private_tag           | -                                                               | string |    -     |   yes    |
-| stack_reg_ex          | -                                                               | string |    -     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| CrossZone |  | string | n/a | yes |
+| ImageId |  | string | n/a | yes |
+| LogPublicationControl |  | string | n/a | yes |
+| ManagedActions |  | string | n/a | yes |
+| PreferredStartTime | For setting Preferred Start Time | string | n/a | yes |
+| RetentionInDays |  | string | n/a | yes |
+| StreamLogs |  | string | n/a | yes |
+| UpdateLevel |  | string | n/a | yes |
+| VpcNameTag |  | string | n/a | yes |
+| application\_key |  | string | n/a | yes |
+| application\_name |  | string | n/a | yes |
+| asg-instanceport |  | string | n/a | yes |
+| asg-listenerport |  | string | n/a | yes |
+| asg-maxsize |  | string | n/a | yes |
+| asg-minsize |  | string | n/a | yes |
+| common\_tags |  | map | n/a | yes |
+| healthcheck |  | string | n/a | yes |
+| instance\_size |  | string | n/a | yes |
+| name |  | string | n/a | yes |
+| private\_tag |  | string | n/a | yes |
+| stack\_reg\_ex |  | string | n/a | yes |
 
 ## Outputs
 
-| Name  | Description |
-|-------|-------------|
-| cname | -           |
+| Name | Description |
+|------|-------------|
+| cname |  |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
