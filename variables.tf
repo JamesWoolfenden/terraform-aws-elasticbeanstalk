@@ -65,7 +65,7 @@ variable "name" {
 
 variable "PreferredStartTime" {
   type        = string
-  description = ""
+  description = "For setting Preferred Start Time"
 }
 
 variable "private_tag" {
