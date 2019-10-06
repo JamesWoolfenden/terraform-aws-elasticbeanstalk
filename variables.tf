@@ -86,3 +86,4 @@ variable "common_tags" {
 locals {
   ebs_bucket = "beanstalk-${data.aws_caller_identity.current.account_id}"
 }
+             
