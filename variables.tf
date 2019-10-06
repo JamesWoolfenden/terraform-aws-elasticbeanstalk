@@ -8,42 +8,12 @@ variable "application_name" {
   description = ""
 }
 
-variable "asg-instanceport" {
-  type        = string
-  description = ""
-}
-
-variable "asg-listenerport" {
-  type        = string
-  description = ""
-}
-
-variable "asg-maxsize" {
-  type        = string
-  description = ""
-}
-
-variable "asg-minsize" {
-  type        = string
-  description = ""
-}
-
 variable "CrossZone" {
   type        = string
   description = ""
 }
 
 variable "healthcheck" {
-  type        = string
-  description = ""
-}
-
-variable "ImageId" {
-  type        = string
-  description = ""
-}
-
-variable "instance_size" {
   type        = string
   description = ""
 }
@@ -68,11 +38,6 @@ variable "PreferredStartTime" {
   description = "For setting Preferred Start Time"
 }
 
-variable "private_tag" {
-  type        = string
-  description = ""
-}
-
 variable "RetentionInDays" {
   type        = string
   description = ""
@@ -93,13 +58,29 @@ variable "UpdateLevel" {
   description = ""
 }
 
-variable "VpcNameTag" {
-  type        = string
-  description = ""
+variable "DeploymentPolicy" {
+  default = "Rolling"
+}
+
+variable "asg" {
+  type = map
+}
+
+variable "launchconfiguration" {
+  type = map
+}
+
+variable "vpc" {
+  type = map
+}
+
+variable "rollingupdate" {
+  type = map
 }
 
 variable "common_tags" {
-  type = map
+  type        = map
+  description = "Implements the common tags scheme"
 }
 
 locals {

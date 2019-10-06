@@ -7,14 +7,21 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
-    value     = "aws-elasticbeanstalk-ec2-role"
+    value     = var.launchconfiguration["IamInstanceProfile"]
   }
 
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "InstanceType"
-    value     = var.instance_size
+    value     = var.launchconfiguration["InstanceType"]
   }
+
+  setting {
+    namespace = "aws:autoscaling:launchconfiguration"
+    name      = "ImageId"
+    value     = var.launchconfiguration["ImageId"]
+  }
+
 
   setting {
     namespace = "aws:elasticbeanstalk:healthreporting:system"
@@ -37,61 +44,56 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
   setting {
     namespace = "aws:autoscaling:updatepolicy:rollingupdate"
     name      = "RollingUpdateEnabled"
-    value     = "true"
+    value     = var.rollingupdate["RollingUpdateEnabled"]
   }
 
   setting {
     namespace = "aws:autoscaling:updatepolicy:rollingupdate"
     name      = "RollingUpdateType"
-    value     = "Health"
+    value     = var.rollingupdate["RollingUpdateType"]
   }
 
   setting {
     namespace = "aws:autoscaling:updatepolicy:rollingupdate"
     name      = "MinInstancesInService"
-    value     = "1"
+    value     = var.rollingupdate["MinInstancesInService"]
   }
 
   setting {
     namespace = "aws:autoscaling:updatepolicy:rollingupdate"
     name      = "MaxBatchSize"
-    value     = "1"
+    value     = var.rollingupdate["MaxBatchSize"]
   }
 
   setting {
     namespace = "aws:elasticbeanstalk:command"
     name      = "DeploymentPolicy"
-    value     = "Rolling"
+    value     = var.DeploymentPolicy
   }
+
 
   setting {
     namespace = "aws:autoscaling:asg"
     name      = "MinSize"
-    value     = var.asg-minsize
+    value     = var.asg["minsize"]
   }
 
   setting {
     namespace = "aws:autoscaling:asg"
     name      = "MaxSize"
-    value     = var.asg-maxsize
+    value     = var.asg["maxsize"]
   }
 
   setting {
-    namespace = "aws:elb:listener:${var.asg-listenerport}"
+    namespace = "aws:elb:listener:${var.asg["instanceport"]}"
     name      = "InstancePort"
-    value     = var.asg-instanceport
+    value     = var.asg["instanceport"]
   }
 
   setting {
     namespace = "aws:elb:loadbalancer"
     name      = "CrossZone"
     value     = var.CrossZone
-  }
-
-  setting {
-    namespace = "aws:autoscaling:launchconfiguration"
-    name      = "ImageId"
-    value     = var.ImageId
   }
 
   setting {
@@ -139,15 +141,16 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
   setting {
     namespace = "aws:ec2:vpc"
     name      = "ELBScheme"
-    value     = "Internal"
+    value     = var.vpc["ELBScheme"]
   }
+
 
   setting {
     namespace = "aws:ec2:vpc"
     name      = "ELBSubnets"
 
     #comma delimited
-    value = join(",", sort(data.aws_subnet_ids.private.ids))
+    value = join(",", sort(data.aws_subnet_ids.subnets.ids))
   }
 
   setting {
@@ -155,7 +158,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
 
     #comma delimited
     name  = "Subnets"
-    value = join(",", sort(data.aws_subnet_ids.private.ids))
+    value = join(",", sort(data.aws_subnet_ids.subnets.ids))
   }
 
   setting {
@@ -164,7 +167,5 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
     value     = var.healthcheck
   }
 
-  tags = merge(var.common_tags
-    , map("Name", "${var.application_name}-EB-CT")
-  )
+  tags = var.common_tags
 }

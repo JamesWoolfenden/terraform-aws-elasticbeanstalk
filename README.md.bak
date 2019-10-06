@@ -32,35 +32,7 @@ module "elasticbeanstalk" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| CrossZone |  | string | n/a | yes |
-| DeploymentPolicy |  | string | `"Rolling"` | no |
-| LogPublicationControl |  | string | n/a | yes |
-| ManagedActions |  | string | n/a | yes |
-| PreferredStartTime | For setting Preferred Start Time | string | n/a | yes |
-| RetentionInDays |  | string | n/a | yes |
-| StreamLogs |  | string | n/a | yes |
-| UpdateLevel |  | string | n/a | yes |
-| application\_key |  | string | n/a | yes |
-| application\_name |  | string | n/a | yes |
-| asg |  | map | n/a | yes |
-| common\_tags | Implements the common tags scheme | map | n/a | yes |
-| healthcheck |  | string | n/a | yes |
-| launchconfiguration |  | map | n/a | yes |
-| name |  | string | n/a | yes |
-| rollingupdate |  | map | n/a | yes |
-| stack\_reg\_ex |  | string | n/a | yes |
-| vpc |  | map | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| cname |  |
-
+I_WANT_TO_BE_REPLACED
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
