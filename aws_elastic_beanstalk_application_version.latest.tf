@@ -5,5 +5,5 @@ resource "aws_elastic_beanstalk_application_version" "latest" {
   description = "application version created by terraform"
   bucket      = local.ebs_bucket
   key         = var.application_key
-  depends_on  = ["aws_elastic_beanstalk_application.application"]
+  depends_on  = [aws_elastic_beanstalk_application.application]
 }

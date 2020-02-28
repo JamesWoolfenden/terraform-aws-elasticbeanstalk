@@ -32,7 +32,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
   setting {
     namespace = "aws:elasticbeanstalk:healthreporting:system"
     name      = "ConfigDocument"
-    value     = "${file("${path.module}/template/config.json")}"
+    value     = file("${path.module}/template/config.json")
   }
 
   setting {

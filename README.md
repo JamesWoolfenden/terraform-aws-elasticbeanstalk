@@ -70,6 +70,7 @@ module "elasticbeanstalk" {
 
 | Name | Description |
 |------|-------------|
+| beanstalk | n/a |
 | cname | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
