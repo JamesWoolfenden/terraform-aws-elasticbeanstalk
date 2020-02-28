@@ -1,6 +1,11 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-elasticbeanstalk [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest)
+# terraform-aws-elasticbeanstalk
+
+[![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-elasticbeanstalk)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
   A Terraform module organise and deploy AWS Elasticbeanstalk.
 
@@ -32,34 +37,40 @@ module "elasticbeanstalk" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| CrossZone |  | string | n/a | yes |
-| DeploymentPolicy |  | string | `"Rolling"` | no |
-| LogPublicationControl |  | string | n/a | yes |
-| ManagedActions |  | string | n/a | yes |
-| PreferredStartTime | For setting Preferred Start Time | string | n/a | yes |
-| RetentionInDays |  | string | n/a | yes |
-| StreamLogs |  | string | n/a | yes |
-| UpdateLevel |  | string | n/a | yes |
-| application\_key |  | string | n/a | yes |
-| application\_name |  | string | n/a | yes |
-| asg |  | map | n/a | yes |
-| common\_tags | Implements the common tags scheme | map | n/a | yes |
-| healthcheck |  | string | n/a | yes |
-| launchconfiguration |  | map | n/a | yes |
-| name |  | string | n/a | yes |
-| rollingupdate |  | map | n/a | yes |
-| stack\_reg\_ex |  | string | n/a | yes |
-| vpc |  | map | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| CrossZone | n/a | `string` | n/a | yes |
+| DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
+| LogPublicationControl | n/a | `string` | n/a | yes |
+| ManagedActions | n/a | `string` | n/a | yes |
+| PreferredStartTime | For setting Preferred Start Time | `string` | n/a | yes |
+| RetentionInDays | n/a | `string` | n/a | yes |
+| StreamLogs | n/a | `string` | n/a | yes |
+| UpdateLevel | n/a | `string` | n/a | yes |
+| application\_key | n/a | `string` | n/a | yes |
+| application\_name | n/a | `string` | n/a | yes |
+| asg | n/a | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| healthcheck | n/a | `string` | n/a | yes |
+| launchconfiguration | n/a | `map` | n/a | yes |
+| name | n/a | `string` | n/a | yes |
+| rollingupdate | n/a | `map` | n/a | yes |
+| stack\_reg\_ex | n/a | `string` | n/a | yes |
+| vpc | n/a | `map` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| cname |  |
+| cname | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -83,7 +94,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 
 ## License
 
@@ -110,10 +121,10 @@ under the License.
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
