@@ -37,42 +37,7 @@ module "elasticbeanstalk" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| CrossZone | n/a | `string` | n/a | yes |
-| DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
-| LogPublicationControl | n/a | `string` | n/a | yes |
-| ManagedActions | n/a | `string` | n/a | yes |
-| PreferredStartTime | For setting Preferred Start Time | `string` | n/a | yes |
-| RetentionInDays | n/a | `string` | n/a | yes |
-| StreamLogs | n/a | `string` | n/a | yes |
-| UpdateLevel | n/a | `string` | n/a | yes |
-| application\_key | n/a | `string` | n/a | yes |
-| application\_name | n/a | `string` | n/a | yes |
-| asg | n/a | `map` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| healthcheck | n/a | `string` | n/a | yes |
-| launchconfiguration | n/a | `map` | n/a | yes |
-| name | n/a | `string` | n/a | yes |
-| rollingupdate | n/a | `map` | n/a | yes |
-| stack\_reg\_ex | n/a | `string` | n/a | yes |
-| vpc | n/a | `map` | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| beanstalk | n/a |
-| cname | n/a |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -130,8 +95,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-elasticbeanstalk&url=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-elasticbeanstalk&url=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
