@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-elasticbeanstalk.svg)](https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
   A Terraform module organise and deploy AWS Elasticbeanstalk.
 
@@ -37,7 +37,42 @@ module "elasticbeanstalk" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:-----:|
+| CrossZone | n/a | `string` | n/a | yes |
+| DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
+| LogPublicationControl | n/a | `string` | n/a | yes |
+| ManagedActions | n/a | `string` | n/a | yes |
+| PreferredStartTime | For setting Preferred Start Time | `string` | n/a | yes |
+| RetentionInDays | n/a | `string` | n/a | yes |
+| StreamLogs | n/a | `string` | n/a | yes |
+| UpdateLevel | n/a | `string` | n/a | yes |
+| application\_key | n/a | `string` | n/a | yes |
+| application\_name | n/a | `string` | n/a | yes |
+| asg | n/a | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| healthcheck | n/a | `string` | n/a | yes |
+| launchconfiguration | n/a | `map` | n/a | yes |
+| name | n/a | `string` | n/a | yes |
+| rollingupdate | n/a | `map` | n/a | yes |
+| stack\_reg\_ex | n/a | `string` | n/a | yes |
+| vpc | n/a | `map` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| beanstalk | n/a |
+| cname | n/a |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
