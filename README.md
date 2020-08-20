@@ -37,6 +37,10 @@ module "elasticbeanstalk" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -46,7 +50,7 @@ module "elasticbeanstalk" {
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | CrossZone | n/a | `string` | n/a | yes |
 | DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
 | LogPublicationControl | n/a | `string` | n/a | yes |
