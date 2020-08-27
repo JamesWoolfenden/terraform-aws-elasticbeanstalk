@@ -1,4 +1,4 @@
-# Makefile
+#Makefile
 ifdef OS
    BLAT = $(powershell  -noprofile rm .\.terraform\ -force -recurse)
 else
@@ -46,4 +46,3 @@ target:
 
 purge:
 	$(BLAT)
-	terraform init -reconfigure
