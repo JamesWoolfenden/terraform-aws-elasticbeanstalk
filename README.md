@@ -37,7 +37,6 @@ module "elasticbeanstalk" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -45,38 +44,38 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                  | Description                       | Type     | Default     | Required |
-| --------------------- | --------------------------------- | -------- | ----------- | :------: |
-| CrossZone             | n/a                               | `string` | n/a         |   yes    |
-| DeploymentPolicy      | n/a                               | `string` | `"Rolling"` |    no    |
-| LogPublicationControl | n/a                               | `string` | n/a         |   yes    |
-| ManagedActions        | n/a                               | `string` | n/a         |   yes    |
-| PreferredStartTime    | For setting Preferred Start Time  | `string` | n/a         |   yes    |
-| RetentionInDays       | n/a                               | `string` | n/a         |   yes    |
-| StreamLogs            | n/a                               | `string` | n/a         |   yes    |
-| UpdateLevel           | n/a                               | `string` | n/a         |   yes    |
-| application_key       | n/a                               | `string` | n/a         |   yes    |
-| application_name      | n/a                               | `string` | n/a         |   yes    |
-| asg                   | n/a                               | `map`    | n/a         |   yes    |
-| common_tags           | Implements the common tags scheme | `map`    | n/a         |   yes    |
-| healthcheck           | n/a                               | `string` | n/a         |   yes    |
-| launchconfiguration   | n/a                               | `map`    | n/a         |   yes    |
-| name                  | n/a                               | `string` | n/a         |   yes    |
-| rollingupdate         | n/a                               | `map`    | n/a         |   yes    |
-| stack_reg_ex          | n/a                               | `string` | n/a         |   yes    |
-| vpc                   | n/a                               | `map`    | n/a         |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| CrossZone | n/a | `string` | n/a | yes |
+| DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
+| LogPublicationControl | n/a | `string` | n/a | yes |
+| ManagedActions | n/a | `string` | n/a | yes |
+| PreferredStartTime | For setting Preferred Start Time | `string` | n/a | yes |
+| RetentionInDays | n/a | `string` | n/a | yes |
+| StreamLogs | n/a | `string` | n/a | yes |
+| UpdateLevel | n/a | `string` | n/a | yes |
+| application\_key | n/a | `string` | n/a | yes |
+| application\_name | n/a | `string` | n/a | yes |
+| asg | n/a | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| healthcheck | n/a | `string` | n/a | yes |
+| launchconfiguration | n/a | `map` | n/a | yes |
+| name | n/a | `string` | n/a | yes |
+| rollingupdate | n/a | `map` | n/a | yes |
+| stack\_reg\_ex | n/a | `string` | n/a | yes |
+| vpc | n/a | `map` | n/a | yes |
 
 ## Outputs
 
-| Name      | Description |
-| --------- | ----------- |
-| beanstalk | n/a         |
-| cname     | n/a         |
+| Name | Description |
+|------|-------------|
+| beanstalk | n/a |
+| cname | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
