@@ -15,20 +15,20 @@ variable "StreamLogs" { type = string }
 variable "UpdateLevel" { type = string }
 
 variable "launchconfiguration" {
-  type = map
+  type = map(any)
 }
 
-variable "asg" { type = map }
+variable "asg" { type = map(any) }
 
 variable "vpc" {
-  type = map
+  type = map(any)
 }
 
 
 variable "rollingupdate" {
-  type = map
+  type = map(any)
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }
