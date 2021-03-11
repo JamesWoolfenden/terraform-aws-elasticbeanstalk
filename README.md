@@ -51,6 +51,23 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
+| [aws_elastic_beanstalk_application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application) |
+| [aws_elastic_beanstalk_application_version](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) |
+| [aws_elastic_beanstalk_environment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment) |
+| [aws_elastic_beanstalk_solution_stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elastic_beanstalk_solution_stack) |
+| [aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet) |
+| [aws_subnet_ids](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet_ids) |
+| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -65,14 +82,14 @@ No requirements.
 | UpdateLevel | n/a | `string` | n/a | yes |
 | application\_key | n/a | `string` | n/a | yes |
 | application\_name | n/a | `string` | n/a | yes |
-| asg | n/a | `map` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| asg | n/a | `map(any)` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
 | healthcheck | n/a | `string` | n/a | yes |
-| launchconfiguration | n/a | `map` | n/a | yes |
+| launchconfiguration | n/a | `map(any)` | n/a | yes |
 | name | n/a | `string` | n/a | yes |
-| rollingupdate | n/a | `map` | n/a | yes |
+| rollingupdate | n/a | `map(any)` | n/a | yes |
 | stack\_reg\_ex | n/a | `string` | n/a | yes |
-| vpc | n/a | `map` | n/a | yes |
+| vpc | n/a | `map(any)` | n/a | yes |
 
 ## Outputs
 
@@ -80,7 +97,6 @@ No requirements.
 |------|-------------|
 | beanstalk | n/a |
 | cname | n/a |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects

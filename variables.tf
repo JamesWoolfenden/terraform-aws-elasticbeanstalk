@@ -63,27 +63,26 @@ variable "DeploymentPolicy" {
 }
 
 variable "asg" {
-  type = map
+  type = map(any)
 }
 
 variable "launchconfiguration" {
-  type = map
+  type = map(any)
 }
 
 variable "vpc" {
-  type = map
+  type = map(any)
 }
 
 variable "rollingupdate" {
-  type = map
+  type = map(any)
 }
 
 variable "common_tags" {
-  type        = map
+  type        = map(any)
   description = "Implements the common tags scheme"
 }
 
 locals {
   ebs_bucket = "beanstalk-${data.aws_caller_identity.current.account_id}"
 }
-             
