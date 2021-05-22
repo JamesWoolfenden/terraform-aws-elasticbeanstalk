@@ -49,54 +49,54 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
-| [aws_elastic_beanstalk_application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application) |
-| [aws_elastic_beanstalk_application_version](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) |
-| [aws_elastic_beanstalk_environment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment) |
-| [aws_elastic_beanstalk_solution_stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elastic_beanstalk_solution_stack) |
-| [aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet) |
-| [aws_subnet_ids](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet_ids) |
-| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) |
+| Name | Type |
+|------|------|
+| [aws_elastic_beanstalk_application.application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application) | resource |
+| [aws_elastic_beanstalk_application_version.latest](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) | resource |
+| [aws_elastic_beanstalk_environment.beanstalk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_elastic_beanstalk_solution_stack.stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elastic_beanstalk_solution_stack) | data source |
+| [aws_subnet.subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet) | data source |
+| [aws_subnet_ids.subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet_ids) | data source |
+| [aws_vpc.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| CrossZone | n/a | `string` | n/a | yes |
-| DeploymentPolicy | n/a | `string` | `"Rolling"` | no |
-| LogPublicationControl | n/a | `string` | n/a | yes |
-| ManagedActions | n/a | `string` | n/a | yes |
-| PreferredStartTime | For setting Preferred Start Time | `string` | n/a | yes |
-| RetentionInDays | n/a | `string` | n/a | yes |
-| StreamLogs | n/a | `string` | n/a | yes |
-| UpdateLevel | n/a | `string` | n/a | yes |
-| application\_key | n/a | `string` | n/a | yes |
-| application\_name | n/a | `string` | n/a | yes |
-| asg | n/a | `map(any)` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
-| healthcheck | n/a | `string` | n/a | yes |
-| launchconfiguration | n/a | `map(any)` | n/a | yes |
-| name | n/a | `string` | n/a | yes |
-| rollingupdate | n/a | `map(any)` | n/a | yes |
-| stack\_reg\_ex | n/a | `string` | n/a | yes |
-| vpc | n/a | `map(any)` | n/a | yes |
+| <a name="input_CrossZone"></a> [CrossZone](#input\_CrossZone) | n/a | `string` | n/a | yes |
+| <a name="input_DeploymentPolicy"></a> [DeploymentPolicy](#input\_DeploymentPolicy) | n/a | `string` | `"Rolling"` | no |
+| <a name="input_LogPublicationControl"></a> [LogPublicationControl](#input\_LogPublicationControl) | n/a | `string` | n/a | yes |
+| <a name="input_ManagedActions"></a> [ManagedActions](#input\_ManagedActions) | n/a | `string` | n/a | yes |
+| <a name="input_PreferredStartTime"></a> [PreferredStartTime](#input\_PreferredStartTime) | For setting Preferred Start Time | `string` | n/a | yes |
+| <a name="input_RetentionInDays"></a> [RetentionInDays](#input\_RetentionInDays) | n/a | `string` | n/a | yes |
+| <a name="input_StreamLogs"></a> [StreamLogs](#input\_StreamLogs) | n/a | `string` | n/a | yes |
+| <a name="input_UpdateLevel"></a> [UpdateLevel](#input\_UpdateLevel) | n/a | `string` | n/a | yes |
+| <a name="input_application_key"></a> [application\_key](#input\_application\_key) | n/a | `string` | n/a | yes |
+| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | n/a | `string` | n/a | yes |
+| <a name="input_asg"></a> [asg](#input\_asg) | n/a | `map(any)` | n/a | yes |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
+| <a name="input_healthcheck"></a> [healthcheck](#input\_healthcheck) | n/a | `string` | n/a | yes |
+| <a name="input_launchconfiguration"></a> [launchconfiguration](#input\_launchconfiguration) | n/a | `map(any)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_rollingupdate"></a> [rollingupdate](#input\_rollingupdate) | n/a | `map(any)` | n/a | yes |
+| <a name="input_stack_reg_ex"></a> [stack\_reg\_ex](#input\_stack\_reg\_ex) | n/a | `string` | n/a | yes |
+| <a name="input_vpc"></a> [vpc](#input\_vpc) | n/a | `map(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| beanstalk | n/a |
-| cname | n/a |
+| <a name="output_beanstalk"></a> [beanstalk](#output\_beanstalk) | n/a |
+| <a name="output_cname"></a> [cname](#output\_cname) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
