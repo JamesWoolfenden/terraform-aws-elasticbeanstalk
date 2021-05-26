@@ -37,13 +37,14 @@ rollingupdate = {
 
 vpc = {
   default     = true
-  NameTag     = "Default"
+  NameTag     = "TEST"
   tag         = "tag:Name"
-  subnets_tag = "Default"
+  subnets_tag = "TEST"
   ELBScheme   = "Internal"
 }
-
-stack_reg_ex = "^64bit Amazon Linux 2018.03 v3.2.2 running Tomcat (.*) Java (.*)"
+#to update:
+#aws elasticbeanstalk list-available-solution-stacks
+stack_reg_ex = "^64bit Amazon Linux 2018.03 v3.4.7 running Tomcat (.*) Java (.*)"
 common_tags = {
   Application = "Apps"
   Environment = "Dev"

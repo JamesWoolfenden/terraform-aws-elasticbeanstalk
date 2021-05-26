@@ -83,6 +83,13 @@ variable "common_tags" {
   description = "Implements the common tags scheme"
 }
 
+variable "vpc_id" {
+  type=string
+}
 locals {
   ebs_bucket = "beanstalk-${data.aws_caller_identity.current.account_id}"
+}
+
+variable "subnet_ids" {
+  
 }

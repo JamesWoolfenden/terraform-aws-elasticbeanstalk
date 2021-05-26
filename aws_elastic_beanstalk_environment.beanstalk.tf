@@ -135,7 +135,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
   setting {
     namespace = "aws:ec2:vpc"
     name      = "VPCId"
-    value     = data.aws_vpc.vpc.id
+    value     = var.vpc_id
   }
 
   setting {
@@ -150,7 +150,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
     name      = "ELBSubnets"
 
     #comma delimited
-    value = join(",", sort(data.aws_subnet_ids.subnets.ids))
+    value = join(",", sort(var.subnet_ids))
   }
 
   setting {
@@ -158,7 +158,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
 
     #comma delimited
     name  = "Subnets"
-    value = join(",", sort(data.aws_subnet_ids.subnets.ids))
+    value = join(",", sort(var.subnet_ids))
   }
 
   setting {
