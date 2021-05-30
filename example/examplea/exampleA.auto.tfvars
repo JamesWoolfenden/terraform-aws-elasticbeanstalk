@@ -36,10 +36,10 @@ rollingupdate = {
 
 
 vpc = {
-  default     = true
+  default     = false
   NameTag     = "TEST"
   tag         = "tag:Name"
-  subnets_tag = "TEST"
+  subnets_tag = "*Private*"
   ELBScheme   = "Internal"
 }
 #to update:

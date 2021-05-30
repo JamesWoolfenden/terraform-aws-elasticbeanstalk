@@ -15,8 +15,8 @@ module "elasticbeanstalk" {
   stack_reg_ex          = var.stack_reg_ex
   StreamLogs            = var.StreamLogs
   UpdateLevel           = var.UpdateLevel
-  subnet_ids=data.aws_subnet_ids.subnets.ids
+  subnet_ids            = data.aws_subnet_ids.subnets.ids
   vpc                   = var.vpc
-  vpc_id                = data.aws_vpc.vpc.id
+  vpc_id                = tolist(data.aws_vpcs.vpc.ids)[0]
   rollingupdate         = var.rollingupdate
 }

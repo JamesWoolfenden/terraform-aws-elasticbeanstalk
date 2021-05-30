@@ -84,12 +84,12 @@ variable "common_tags" {
 }
 
 variable "vpc_id" {
-  type=string
+  type = string
 }
 locals {
   ebs_bucket = "beanstalk-${data.aws_caller_identity.current.account_id}"
 }
 
 variable "subnet_ids" {
-  
+
 }
