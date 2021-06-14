@@ -39,16 +39,9 @@ vpc = {
   default     = false
   NameTag     = "TEST"
   tag         = "tag:Name"
-  subnets_tag = "*Private*"
+  subnets_tag = "*Public*"
   ELBScheme   = "Internal"
 }
 #to update:
 #aws elasticbeanstalk list-available-solution-stacks
 stack_reg_ex = "^64bit Amazon Linux 2018.03 v3.4.7 running Tomcat (.*) Java (.*)"
-common_tags = {
-  Application = "Apps"
-  Environment = "Dev"
-  CostCode    = "0"
-  SquadName   = "jim"
-  AccountType = "Development"
-}

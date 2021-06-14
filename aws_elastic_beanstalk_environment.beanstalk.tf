@@ -166,6 +166,4 @@ resource "aws_elastic_beanstalk_environment" "beanstalk" {
     name      = "Application Healthcheck URL"
     value     = var.healthcheck
   }
-
-  tags = var.common_tags
 }
