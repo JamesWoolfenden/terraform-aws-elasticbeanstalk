@@ -1,5 +1,5 @@
 data "aws_subnet_ids" "subnets" {
-  vpc_id = data.aws_vpc.vpc.id
+  vpc_id = tolist(data.aws_vpcs.vpc.ids)[0]
 
   tags = {
     Name = var.vpc["subnets_tag"]

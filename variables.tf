@@ -78,11 +78,6 @@ variable "rollingupdate" {
   type = map(any)
 }
 
-variable "common_tags" {
-  type        = map(any)
-  description = "Implements the common tags scheme"
-}
-
 variable "vpc_id" {
   type = string
 }

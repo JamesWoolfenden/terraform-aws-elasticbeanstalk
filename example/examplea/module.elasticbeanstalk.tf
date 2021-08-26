@@ -4,7 +4,6 @@ module "elasticbeanstalk" {
   application_name      = var.application_name
   asg                   = var.asg
   launchconfiguration   = var.launchconfiguration
-  common_tags           = var.common_tags
   CrossZone             = var.CrossZone
   healthcheck           = var.healthcheck
   LogPublicationControl = var.LogPublicationControl
@@ -17,6 +16,6 @@ module "elasticbeanstalk" {
   UpdateLevel           = var.UpdateLevel
   subnet_ids            = data.aws_subnet_ids.subnets.ids
   vpc                   = var.vpc
-  vpc_id                = data.aws_vpc.vpc.id
+  vpc_id                = tolist(data.aws_vpcs.vpc.ids)[0]
   rollingupdate         = var.rollingupdate
 }

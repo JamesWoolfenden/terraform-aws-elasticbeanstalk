@@ -35,8 +35,6 @@ aws ec2 create-tags --resources subnet-ebd9cead --tags Key=Name,Value=Default
 module "elasticbeanstalk" {
   source          = "github.com/jameswoolfenden/terraform-aws-elasticbeanstalk"
   version         = "0.1.8"
-  common_tags     = var.common_tags
-
 }
 ```
 
@@ -80,7 +78,6 @@ No modules.
 | <a name="input_application_key"></a> [application\_key](#input\_application\_key) | n/a | `string` | n/a | yes |
 | <a name="input_application_name"></a> [application\_name](#input\_application\_name) | n/a | `string` | n/a | yes |
 | <a name="input_asg"></a> [asg](#input\_asg) | n/a | `map(any)` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
 | <a name="input_healthcheck"></a> [healthcheck](#input\_healthcheck) | n/a | `string` | n/a | yes |
 | <a name="input_launchconfiguration"></a> [launchconfiguration](#input\_launchconfiguration) | n/a | `map(any)` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |

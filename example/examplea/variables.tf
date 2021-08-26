@@ -28,7 +28,3 @@ variable "vpc" {
 variable "rollingupdate" {
   type = map(any)
 }
-
-variable "common_tags" {
-  type = map(any)
-}
