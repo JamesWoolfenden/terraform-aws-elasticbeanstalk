@@ -39,16 +39,15 @@ module "elasticbeanstalk" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.34.0 |
 
 ## Modules
 
@@ -56,46 +55,99 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                                                  | Type        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_elastic_beanstalk_application.application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application)            | resource    |
-| [aws_elastic_beanstalk_application_version.latest](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) | resource    |
-| [aws_elastic_beanstalk_environment.beanstalk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment)              | resource    |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)                                         | data source |
-| [aws_elastic_beanstalk_solution_stack.stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elastic_beanstalk_solution_stack)         | data source |
+| Name | Type |
+|------|------|
+| [aws_elastic_beanstalk_application.application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application) | resource |
+| [aws_elastic_beanstalk_application_version.latest](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) | resource |
+| [aws_elastic_beanstalk_environment.beanstalk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_elastic_beanstalk_solution_stack.stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/elastic_beanstalk_solution_stack) | data source |
 
 ## Inputs
 
-| Name                                                                                             | Description                      | Type       | Default     | Required |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- | ----------- | :------: |
-| <a name="input_CrossZone"></a> [CrossZone](#input_CrossZone)                                     | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_DeploymentPolicy"></a> [DeploymentPolicy](#input_DeploymentPolicy)                | n/a                              | `string`   | `"Rolling"` |    no    |
-| <a name="input_LogPublicationControl"></a> [LogPublicationControl](#input_LogPublicationControl) | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_ManagedActions"></a> [ManagedActions](#input_ManagedActions)                      | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_PreferredStartTime"></a> [PreferredStartTime](#input_PreferredStartTime)          | For setting Preferred Start Time | `string`   | n/a         |   yes    |
-| <a name="input_RetentionInDays"></a> [RetentionInDays](#input_RetentionInDays)                   | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_StreamLogs"></a> [StreamLogs](#input_StreamLogs)                                  | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_UpdateLevel"></a> [UpdateLevel](#input_UpdateLevel)                               | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_application_key"></a> [application_key](#input_application_key)                   | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_application_name"></a> [application_name](#input_application_name)                | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_asg"></a> [asg](#input_asg)                                                       | n/a                              | `map(any)` | n/a         |   yes    |
-| <a name="input_healthcheck"></a> [healthcheck](#input_healthcheck)                               | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_launchconfiguration"></a> [launchconfiguration](#input_launchconfiguration)       | n/a                              | `map(any)` | n/a         |   yes    |
-| <a name="input_name"></a> [name](#input_name)                                                    | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_rollingupdate"></a> [rollingupdate](#input_rollingupdate)                         | n/a                              | `map(any)` | n/a         |   yes    |
-| <a name="input_stack_reg_ex"></a> [stack_reg_ex](#input_stack_reg_ex)                            | n/a                              | `string`   | n/a         |   yes    |
-| <a name="input_subnet_ids"></a> [subnet_ids](#input_subnet_ids)                                  | n/a                              | `any`      | n/a         |   yes    |
-| <a name="input_vpc"></a> [vpc](#input_vpc)                                                       | n/a                              | `map(any)` | n/a         |   yes    |
-| <a name="input_vpc_id"></a> [vpc_id](#input_vpc_id)                                              | n/a                              | `string`   | n/a         |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_CrossZone"></a> [CrossZone](#input\_CrossZone) | n/a | `string` | n/a | yes |
+| <a name="input_DeploymentPolicy"></a> [DeploymentPolicy](#input\_DeploymentPolicy) | n/a | `string` | `"Rolling"` | no |
+| <a name="input_LogPublicationControl"></a> [LogPublicationControl](#input\_LogPublicationControl) | n/a | `string` | n/a | yes |
+| <a name="input_ManagedActions"></a> [ManagedActions](#input\_ManagedActions) | n/a | `string` | n/a | yes |
+| <a name="input_PreferredStartTime"></a> [PreferredStartTime](#input\_PreferredStartTime) | For setting Preferred Start Time | `string` | n/a | yes |
+| <a name="input_RetentionInDays"></a> [RetentionInDays](#input\_RetentionInDays) | n/a | `string` | n/a | yes |
+| <a name="input_StreamLogs"></a> [StreamLogs](#input\_StreamLogs) | n/a | `string` | n/a | yes |
+| <a name="input_UpdateLevel"></a> [UpdateLevel](#input\_UpdateLevel) | n/a | `string` | n/a | yes |
+| <a name="input_application_key"></a> [application\_key](#input\_application\_key) | n/a | `string` | n/a | yes |
+| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | n/a | `string` | n/a | yes |
+| <a name="input_asg"></a> [asg](#input\_asg) | n/a | `map(any)` | n/a | yes |
+| <a name="input_healthcheck"></a> [healthcheck](#input\_healthcheck) | n/a | `string` | n/a | yes |
+| <a name="input_launchconfiguration"></a> [launchconfiguration](#input\_launchconfiguration) | n/a | `map(any)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_rollingupdate"></a> [rollingupdate](#input\_rollingupdate) | n/a | `map(any)` | n/a | yes |
+| <a name="input_stack_reg_ex"></a> [stack\_reg\_ex](#input\_stack\_reg\_ex) | n/a | `string` | n/a | yes |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `any` | n/a | yes |
+| <a name="input_vpc"></a> [vpc](#input\_vpc) | n/a | `map(any)` | n/a | yes |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | n/a | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                                           | Description |
-| -------------------------------------------------------------- | ----------- |
-| <a name="output_beanstalk"></a> [beanstalk](#output_beanstalk) | n/a         |
-| <a name="output_cname"></a> [cname](#output_cname)             | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_beanstalk"></a> [beanstalk](#output\_beanstalk) | n/a |
+| <a name="output_cname"></a> [cname](#output\_cname) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Policy
+
+This is the policy required to build this project:
+
+<!-- BEGINNING OF PRE-COMMIT-PIKE DOCS HOOK -->
+The Terraform resource required is:
+
+```golang
+resource "aws_iam_policy" "terraform_pike" {
+  name_prefix = "terraform_pike"
+  path        = "/"
+  description = "Pike Autogenerated policy from IAC"
+
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeAccountAttributes"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "elasticbeanstalk:CreateApplication",
+                "elasticbeanstalk:DeleteApplication",
+                "elasticbeanstalk:DescribeApplications",
+                "elasticbeanstalk:ListAvailableSolutionStacks",
+                "elasticbeanstalk:ListTagsForResource",
+                "elasticbeanstalk:UpdateApplicationResourceLifecycle"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucket"
+            ],
+            "Resource": "*"
+        }
+    ]
+})
+}
+
+
+```
+<!-- END OF PRE-COMMIT-PIKE DOCS HOOK -->
 
 ## Related Projects
 
@@ -148,11 +200,3 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
-[twitter]: https://twitter.com/JimWoolfenden
-[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-elasticbeanstalk&url=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
-[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-elasticbeanstalk&url=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
-[share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
-[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk
-[share_email]: mailto:?subject=terraform-aws-elasticbeanstalk&body=https://github.com/JamesWoolfenden/terraform-aws-elasticbeanstalk

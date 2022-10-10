@@ -44,4 +44,4 @@ vpc = {
 }
 #to update:
 #aws elasticbeanstalk list-available-solution-stacks
-stack_reg_ex = "^64bit Amazon Linux 2018.03 v3.4.12 running Tomcat (.*) Java (.*)"
+stack_reg_ex = "^64bit Amazon Linux 2018.03 v3.4.0 running Tomcat (.*) Java (.*)"
