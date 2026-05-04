@@ -117,29 +117,57 @@ resource "aws_iam_policy" "terraform_pike" {
             "Action": [
                 "ec2:DescribeAccountAttributes"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
+                "elasticbeanstalk:AssociateEnvironmentOperationsRole",
                 "elasticbeanstalk:CreateApplication",
+                "elasticbeanstalk:CreateApplicationVersion",
+                "elasticbeanstalk:CreateEnvironment",
                 "elasticbeanstalk:DeleteApplication",
+                "elasticbeanstalk:DeleteApplicationVersion",
+                "elasticbeanstalk:DescribeApplicationVersions",
                 "elasticbeanstalk:DescribeApplications",
+                "elasticbeanstalk:DescribeEnvironments",
+                "elasticbeanstalk:DisassociateEnvironmentOperationsRole",
                 "elasticbeanstalk:ListAvailableSolutionStacks",
                 "elasticbeanstalk:ListTagsForResource",
-                "elasticbeanstalk:UpdateApplicationResourceLifecycle"
+                "elasticbeanstalk:TerminateEnvironment",
+                "elasticbeanstalk:UpdateApplicationResourceLifecycle",
+                "elasticbeanstalk:UpdateApplicationVersion",
+                "elasticbeanstalk:UpdateEnvironment"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
-                "s3:GetBucketLocation",
-                "s3:ListBucket"
+                "iam:PassRole"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
