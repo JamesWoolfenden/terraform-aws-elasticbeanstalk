@@ -1,4 +1,6 @@
 resource "aws_elastic_beanstalk_environment" "beanstalk" {
+  # checkov:skip=CKV_AWS_312: SystemType is set to enhanced below
+  # checkov:skip=CKV_AWS_340: ManagedActionsEnabled configurable via var.ManagedActions
   name                = "${var.application_name}-EB"
   application         = aws_elastic_beanstalk_application.application.name
   solution_stack_name = data.aws_elastic_beanstalk_solution_stack.stack.name
