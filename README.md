@@ -46,8 +46,8 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.34.0 |
+| ---- | ------- |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -56,7 +56,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_elastic_beanstalk_application.application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application) | resource |
 | [aws_elastic_beanstalk_application_version.latest](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_application_version) | resource |
 | [aws_elastic_beanstalk_environment.beanstalk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elastic_beanstalk_environment) | resource |
@@ -66,7 +66,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_CrossZone"></a> [CrossZone](#input\_CrossZone) | n/a | `string` | n/a | yes |
 | <a name="input_DeploymentPolicy"></a> [DeploymentPolicy](#input\_DeploymentPolicy) | n/a | `string` | `"Rolling"` | no |
 | <a name="input_LogPublicationControl"></a> [LogPublicationControl](#input\_LogPublicationControl) | n/a | `string` | n/a | yes |
@@ -90,7 +90,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_beanstalk"></a> [beanstalk](#output\_beanstalk) | n/a |
 | <a name="output_cname"></a> [cname](#output\_cname) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
